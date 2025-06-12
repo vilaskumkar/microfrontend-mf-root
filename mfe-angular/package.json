@@ -2,6 +2,9 @@
   "name": "mfe-angular",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+},
   "dependencies": {
     "@angular/core": "^13.0.0"
   },
