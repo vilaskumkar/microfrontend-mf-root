@@ -1,16 +1,43 @@
-console.log('bootstrap');
+console.log("bootstrap");
 
-import('mfeReact/App').then((mount) => {
-  if (mount.default) mount = mount.default;
-  mount('#react-root');
-});
+// React MFE
+import("mfeReact/App")
+  .then((module) => {
+    const mount = module.default || module;
+    if (typeof mount === "function") {
+      mount("#react-root");
+    } else {
+      console.error("React mount function not found");
+    }
+  })
+  .catch((err) => {
+    console.error("Error loading React MFE:", err);
+  });
 
-import('mfeAngular/App').then((mount) => {
-  if (mount.default) mount = mount.default;
-  mount('#angular-root');
-});
+// Angular MFE
+import("mfeAngular/App")
+  .then((module) => {
+    const mount = module.default || module;
+    if (typeof mount === "function") {
+      mount("#angular-root");
+    } else {
+      console.error("Angular mount function not found");
+    }
+  })
+  .catch((err) => {
+    console.error("Error loading Angular MFE:", err);
+  });
 
-import('mfeVue/App').then((mount) => {
-  if (mount.default) mount = mount.default;
-  mount('#vue-root');
-});
+// Vue MFE
+import("mfeVue/App")
+  .then((module) => {
+    const mount = module.default || module;
+    if (typeof mount === "function") {
+      mount("#vue-root");
+    } else {
+      console.error("Vue mount function not found");
+    }
+  })
+  .catch((err) => {
+    console.error("Error loading Vue MFE:", err);
+  });
