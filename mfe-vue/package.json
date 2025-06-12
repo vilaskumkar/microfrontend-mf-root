@@ -1,0 +1,12 @@
+{
+  "name": "mfe-vue",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  }
+}
