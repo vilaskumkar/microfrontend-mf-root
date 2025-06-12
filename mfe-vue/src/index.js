@@ -1,3 +1,2 @@
-import App from './App';
-console.log(App());
-console.log('mfe-vue');
+import mount from './App';
+export default mount;

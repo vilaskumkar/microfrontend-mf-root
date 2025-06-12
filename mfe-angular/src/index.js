@@ -1,1 +1,2 @@
-import App from './App';console.log(App());
+import mount from './App';
+export default mount;
