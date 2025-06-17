@@ -27,7 +27,7 @@ if [ -f package.json ]; then
 fi
 
 # Install dependencies in each micro frontend and container
-declare -a dirs=("container" "mfe-react" "mfe-angular" "mfe-vue")
+declare -a dirs=("container" "mfe-react" "mfe-angular" "mfe-vue" "mfe-nextjs")
 for dir in "${dirs[@]}"; do
   echo "Installing dependencies in $dir..."
   (cd "$dir" && yarn install)
@@ -49,9 +49,11 @@ open_tab container 8080
 open_tab mfe-react 8081
 open_tab mfe-angular 8082
 open_tab mfe-vue 8083
+open_tab mfe-nextjs 8084
 
 echo "All apps are starting!"
 echo "Container: http://localhost:8080"
 echo "React MFE: http://localhost:8081"
 echo "Angular MFE: http://localhost:8082"
-echo "Vue MFE: http://localhost:8083" 
+echo "Vue MFE: http://localhost:8083"
+echo "Next.js MFE: http://localhost:8084" 

@@ -13,7 +13,7 @@ export default function mount(selector = "body") {
   container.appendChild(lastUpdate);
 
   const button = document.createElement("button");
-  button.textContent = "Update from React";
+  button.textContent = "Update from React using CustomEvents";
   button.style.padding = "8px 16px";
   button.style.marginTop = "10px";
 

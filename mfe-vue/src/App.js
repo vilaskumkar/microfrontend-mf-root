@@ -59,7 +59,7 @@ export default function mount(selector = "body") {
               style: { padding: "8px 16px", marginTop: "10px" },
               onClick: send,
             },
-            "Update from Vue"
+            "Update from Vue using CustomEvents"
           ),
         ]);
     },

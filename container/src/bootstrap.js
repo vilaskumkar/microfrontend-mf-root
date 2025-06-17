@@ -41,3 +41,17 @@ import("mfeVue/App")
   .catch((err) => {
     console.error("Error loading Vue MFE:", err);
   });
+
+// Next.js MFE
+import("mfeNextjs/App")
+  .then((module) => {
+    const mount = module.default || module;
+    if (typeof mount === "function") {
+      mount("#nextjs-root");
+    } else {
+      console.error("Next.js mount function not found");
+    }
+  })
+  .catch((err) => {
+    console.error("Error loading Next.js MFE:", err);
+  });

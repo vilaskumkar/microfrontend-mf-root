@@ -9,7 +9,7 @@ import { Component, OnInit, NgZone } from "@angular/core";
         Last update: {{ lastUpdate }}
       </div>
       <button (click)="send()" style="padding: 8px 16px; margin-top: 10px;">
-        Update from Angular
+        Update from Angular using CustomEvents
       </button>
     </div>
   `,
